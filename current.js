@@ -10,7 +10,7 @@ const actionTest = tape ? require('tape-redux').actionTest : require('redux-ava'
 
 if (tape) {
   // Parameters bound, not `dispatch`
-  const actionCreator = testAction.bind(this, 'Alice')
+  const actionCreator = testAction.bind(null, 'Alice')
 
   test('current tape testAction', actionTest(
     actionCreator,
@@ -21,7 +21,7 @@ if (tape) {
 
 if (ava) {
   // Only one parameter can be passed within `actionTest`
-  const actionCreator = testAction.bind(this, 'Bob', 35)
+  const actionCreator = testAction.bind(null, 'Bob', 35)
 
   test('current ava testAction', actionTest(
     actionCreator,
