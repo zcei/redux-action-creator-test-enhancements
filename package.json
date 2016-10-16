@@ -1,0 +1,20 @@
+{
+  "name": "test-enhancements",
+  "version": "1.0.0",
+  "description": "",
+  "main": "action-tests.js",
+  "scripts": {
+    "test": "npm run test:current && npm run test:next",
+    "test:current": "ava current.js && tape current.js",
+    "test:next": "ava next.js && tape next.js"
+  },
+  "keywords": [],
+  "author": "Stephan Schneider (https://github.com/zcei)",
+  "license": "MIT",
+  "dependencies": {
+    "ava": "^0.16.0",
+    "redux-ava": "^2.1.0",
+    "tape": "^4.6.2",
+    "tape-redux": "0.0.3"
+  }
+}
